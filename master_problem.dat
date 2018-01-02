@@ -1,0 +1,44 @@
+/*********************************************
+ * OPL 12.5 Data
+ * Author: cholda
+ * Creation Date: 10 Dec 3014 at 16:50:52
+ *********************************************/
+
+Nodes = {Node1,
+ 		Node2,
+  		Node3,
+  		Node4,
+  		Node5,
+ 		Node6};
+  
+ Arcs = {<Node1,Node2>, <Node2,Node1>, 
+ 		<Node1,Node3>, <Node3,Node1>,
+ 		<Node1,Node4>, <Node4,Node1>,
+ 		<Node1,Node5>, <Node5,Node1>,
+ 		//<Node1,Node6>, <Node6,Node1>, 18 19
+ 		<Node2,Node4>, <Node4,Node2>,
+ 		<Node2,Node3>, <Node3,Node2>,
+ 		<Node2,Node5>, <Node5,Node2>,
+ 		<Node2,Node6>, <Node6,Node2>,
+		<Node3,Node5>, <Node5,Node3>,
+		<Node3,Node4>, <Node4,Node3>,
+		<Node3,Node6>, <Node6,Node3>,
+ 		<Node4,Node6>, <Node6,Node4>,
+ 		<Node4,Node5>, <Node5,Node4>,
+ 		<Node5,Node6>, <Node6,Node5>};
+
+ Capacity = [30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30]; // czyli s¹ 3 wi¹zki zainstalowane na ka¿dym ³uku
+
+ //Capacity = [100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100];
+ 
+ //Capacity = [99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99 99];
+ 
+ //Capacity = [10 10 10 10 2500 2500 10 10 10 10 2500 2500 10 10 10 10 2500 2500 2500 2500 10 10 2500 2500 2500 2500];
+
+ //Capacity = [15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15];
+ 
+ // Capacity = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1];
+ 
+ Demands = {<Node1,Node6>};
+ 
+ Volume = [80];
