@@ -56,17 +56,18 @@ float c[Arcs]; // koszt ³¹cza = odleg³oœæ fizyczna
 float k[Arcs]; // koszt otwarcia ³¹cza
 float Capacity[Arcs] = ...; // ile ³¹cze udŸwignie = link bandwidth
 
-Coordinates nodeLocation[Nodes];
+Coordinates nodeLocation[Nodes]=...;
 execute {
 
 	function distance(Node1, Node2){ // obliczam odleg³oœci miêdzy nodami za pomoc¹ wylosowanych wspó³rzêdnych
 		return Opl.sqrt(Opl.pow(Node1.x-Node2.x,2)+Opl.pow(Node1.y-Node2.y,2));	
 	}
-
+/*
 	for (var source in Nodes) { // losujê wspó³rzêdne nodów
 		nodeLocation[source].x=Opl.rand(100);
 		nodeLocation[source].y=Opl.rand(100);	
 	}
+	*/
 	
 	for (var e in Arcs){ // ka¿dy koszt to dystans miêdzy nodami
 		// koszt u¿ycia danego ³¹cza

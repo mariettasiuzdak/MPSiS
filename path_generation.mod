@@ -183,7 +183,7 @@
 	writeln(opl_MPSiS_master.y);	
 	writeln(opl_MPSiS_master.x);	
 	writeln(opl_MPSiS_master.c);
-	writeln(opl_MPSiS_master.k);
+	writeln(opl_MPSiS_master.nodeLocation);
 	writeln(opl_MPSiS_master.Demands);
 	writeln(opl_MPSiS_master.Capacity);
 	writeln(opl_MPSiS_master.M);
