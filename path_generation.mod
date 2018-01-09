@@ -10,7 +10,11 @@
 	var cplex_master = new IloCplex();
 	var def_master = new IloOplModelDefinition(source_master);
 	var opl_master = new IloOplModel(def_master,cplex_master);
-	var data_master = new IloOplDataSource("master_problem.dat");
+	//var data_master = new IloOplDataSource("master_problem.dat");
+	//var data_master = new IloOplDataSource("master_problem1.dat");
+	//var data_master = new IloOplDataSource("master_problem2.dat");
+	//var data_master = new IloOplDataSource("master_problem3.dat");
+	var data_master = new IloOplDataSource("master_problem4.dat");
 	opl_master.addDataSource(data_master);
 	opl_master.generate();
 
@@ -168,7 +172,11 @@
 	var MPSiS_cplex_master = new IloCplex();
 	var def_MPSiS_master = new IloOplModelDefinition(MPSiS_master);
 	var opl_MPSiS_master = new IloOplModel(def_MPSiS_master, MPSiS_cplex_master);
-	var data_master_MPSiS = new IloOplDataSource("projekt_matma.dat");
+	//var data_master_MPSiS = new IloOplDataSource("projekt_matma.dat");
+	//var data_master_MPSiS = new IloOplDataSource("projekt_matma1.dat");
+	//ar data_master_MPSiS = new IloOplDataSource("projekt_matma2.dat");
+	//var data_master_MPSiS = new IloOplDataSource("projekt_matma3.dat");
+	var data_master_MPSiS = new IloOplDataSource("projekt_matma4.dat");
 	writeln('tutaj');
 	opl_MPSiS_master.addDataSource(data_master_new);
 	opl_MPSiS_master.addDataSource(data_master_MPSiS);
@@ -181,8 +189,13 @@
 	//writeln(opl_MPSIS_master.y);	
 	writeln(opl_MPSiS_master.delta);
 	writeln(opl_MPSiS_master.y);	
-	writeln(opl_MPSiS_master.x);	
+	writeln(opl_MPSiS_master.x);
+	writeln("koszt C:");	
 	writeln(opl_MPSiS_master.c);
+	writeln("koszt K:");
+	writeln(opl_MPSiS_master.k);
+	writeln("bud¿et B:");
+	writeln(opl_MPSiS_master.B);
 	writeln(opl_MPSiS_master.nodeLocation);
 	writeln(opl_MPSiS_master.Demands);
 	writeln(opl_MPSiS_master.Capacity);

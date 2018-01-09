@@ -1,0 +1,46 @@
+/*********************************************
+ * OPL 12.7.1.0 Data
+ * Author: Marietta
+ * Creation Date: 9 sty 2018 at 17:49:46
+ *********************************************/
+
+Nodes = {Seattle, LosAngeles, SanFrancisco, LasVegas, SaltLakeCity, ElPaso};
+
+Arcs = {<Seattle,LosAngeles>, 
+<LosAngeles,Seattle>, 
+<Seattle,SanFrancisco>, 
+<SanFrancisco,Seattle>,
+<Seattle,LasVegas>, 
+<LasVegas,Seattle>, 
+<Seattle,SaltLakeCity>, 
+<SaltLakeCity,Seattle>, 
+<Seattle,ElPaso>, 
+<ElPaso,Seattle>, 
+<LosAngeles,SanFrancisco>,
+<SanFrancisco,LosAngeles>,  
+<LosAngeles,LasVegas>, 
+<LasVegas,LosAngeles>, 
+<LosAngeles,SaltLakeCity>, 
+<SaltLakeCity,LosAngeles>, 
+<LosAngeles,ElPaso>, 
+<ElPaso,LosAngeles>, 
+<SanFrancisco,LasVegas>, 
+<LasVegas,SanFrancisco>, 
+<SanFrancisco,SaltLakeCity>, 
+<SaltLakeCity,SanFrancisco>, 
+<SanFrancisco,ElPaso>, 
+<ElPaso,SanFrancisco>, 
+<SaltLakeCity,ElPaso>, 
+<ElPaso,SaltLakeCity>,
+<LasVegas,SaltLakeCity>, 
+<SaltLakeCity,LasVegas>, 
+<LasVegas,ElPaso>, 
+<ElPaso,LasVegas>};
+
+
+Capacity = [1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000];
+
+Demands = {<Seattle,LosAngeles>, <Seattle,SanFrancisco>, <Seattle,LasVegas>, <Seattle,SaltLakeCity>, <Seattle,ElPaso>, <LosAngeles,Seattle>, <LosAngeles,SanFrancisco>, <LosAngeles,LasVegas>, <LosAngeles,SaltLakeCity>, <LosAngeles,ElPaso>, <SanFrancisco,Seattle>, <SanFrancisco,LosAngeles>, <SanFrancisco,LasVegas>, <SanFrancisco,SaltLakeCity>, <SanFrancisco,ElPaso>, <LasVegas,Seattle>, <LasVegas,LosAngeles>, <LasVegas,SanFrancisco>, <LasVegas,SaltLakeCity>, <LasVegas,ElPaso>, <SaltLakeCity,Seattle>, <SaltLakeCity,LosAngeles>, <SaltLakeCity,SanFrancisco>, <SaltLakeCity,LasVegas>, <SaltLakeCity,ElPaso>, <ElPaso,Seattle>, <ElPaso,LosAngeles>, <ElPaso,SanFrancisco>, <ElPaso,LasVegas>, <ElPaso,SaltLakeCity>};
+
+Volume = [10 20 30 40 50 10 10 20 30 40 20 10 10 20 30 30 20 10 10 20 40 30 20 10 10 50 40 30 20 10];
+ 

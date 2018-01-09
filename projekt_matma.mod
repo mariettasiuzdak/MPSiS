@@ -84,8 +84,8 @@ execute {
 		}
 		*/
 		//tutaj linearyzacja na poprawnie
-		k[e]= 3/20*(c[e]^2);
-		
+		//k[e]= 3/20*(c[e]^2);
+		k[e]= (Opl.sqrt((20/3)*(c[e])) + c[e]);
 		
 	}
 //sprobuj linearyzacje	
@@ -118,8 +118,11 @@ int M = 10; // wielkoœæ modu³u - w naszym przypadku jest to wi¹zka 10Gbps
 
 
 
-
-minimize sum(i in Arcs) (c[i]*y[i] + k[i]*u[i]);
+dexpr float B = sum(i in Arcs) (c[i]*y[i] + k[i]*u[i]);
+//minimize sum(i in Arcs) (c[i]*y[i] + k[i]*u[i]);
+ 
+ minimize B;
+ 
  
 subject to
  {
