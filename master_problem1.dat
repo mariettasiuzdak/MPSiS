@@ -22,7 +22,8 @@ Arcs = {<Seattle,SanFrancisco>,
 <ElPaso,LosAngeles>, 
 <ElPaso,LasVegas>};
 
-Capacity = [50 50 50 50 50 50 50 50 50 50 50 50 50 50 50 50];
+Capacity = [100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100];
+//Capacity = [10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10];
 
 Demands = {<Seattle,LosAngeles>, <Seattle,SanFrancisco>, <Seattle,LasVegas>, <Seattle,SaltLakeCity>, <Seattle,ElPaso>, <LosAngeles,Seattle>, <LosAngeles,SanFrancisco>, <LosAngeles,LasVegas>, <LosAngeles,SaltLakeCity>, <LosAngeles,ElPaso>, <SanFrancisco,Seattle>, <SanFrancisco,LosAngeles>, <SanFrancisco,LasVegas>, <SanFrancisco,SaltLakeCity>, <SanFrancisco,ElPaso>, <LasVegas,Seattle>, <LasVegas,LosAngeles>, <LasVegas,SanFrancisco>, <LasVegas,SaltLakeCity>, <LasVegas,ElPaso>, <SaltLakeCity,Seattle>, <SaltLakeCity,LosAngeles>, <SaltLakeCity,SanFrancisco>, <SaltLakeCity,LasVegas>, <SaltLakeCity,ElPaso>, <ElPaso,Seattle>, <ElPaso,LosAngeles>, <ElPaso,SanFrancisco>, <ElPaso,LasVegas>, <ElPaso,SaltLakeCity>};
 

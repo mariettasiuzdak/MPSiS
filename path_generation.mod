@@ -10,11 +10,11 @@
 	var cplex_master = new IloCplex();
 	var def_master = new IloOplModelDefinition(source_master);
 	var opl_master = new IloOplModel(def_master,cplex_master);
-	//var data_master = new IloOplDataSource("master_problem.dat");
+	var data_master = new IloOplDataSource("master_problem.dat");
 	//var data_master = new IloOplDataSource("master_problem1.dat");
 	//var data_master = new IloOplDataSource("master_problem2.dat");
 	//var data_master = new IloOplDataSource("master_problem3.dat");
-	var data_master = new IloOplDataSource("master_problem4.dat");
+	//var data_master = new IloOplDataSource("master_problem4.dat");
 	opl_master.addDataSource(data_master);
 	opl_master.generate();
 
@@ -167,30 +167,37 @@
 		
 }	
 	
-	writeln('tutaj');
 	var MPSiS_master = new IloOplModelSource("projekt_matma.mod");
 	var MPSiS_cplex_master = new IloCplex();
 	var def_MPSiS_master = new IloOplModelDefinition(MPSiS_master);
 	var opl_MPSiS_master = new IloOplModel(def_MPSiS_master, MPSiS_cplex_master);
-	//var data_master_MPSiS = new IloOplDataSource("projekt_matma.dat");
+	var data_master_MPSiS = new IloOplDataSource("projekt_matma.dat");
 	//var data_master_MPSiS = new IloOplDataSource("projekt_matma1.dat");
-	//ar data_master_MPSiS = new IloOplDataSource("projekt_matma2.dat");
+	//var data_master_MPSiS = new IloOplDataSource("projekt_matma2.dat");
 	//var data_master_MPSiS = new IloOplDataSource("projekt_matma3.dat");
-	var data_master_MPSiS = new IloOplDataSource("projekt_matma4.dat");
-	writeln('tutaj');
+	//var data_master_MPSiS = new IloOplDataSource("projekt_matma4.dat");
 	opl_MPSiS_master.addDataSource(data_master_new);
 	opl_MPSiS_master.addDataSource(data_master_MPSiS);
 	opl_MPSiS_master.generate();
 	MPSiS_cplex_master.solve();
-	//writeln(opl_MPSIS_master.Arcs);
-	//writeln(opl_MPSIS_master.Demands);
-	//writeln(opl_MPSIS_master.Volume);
-	//writeln(opl_MPSIS_master.x);	
-	//writeln(opl_MPSIS_master.y);	
-	writeln(opl_MPSiS_master.delta);
-	writeln(opl_MPSiS_master.y);	
+	writeln("macierz y:");
+	writeln(opl_MPSiS_master.y);
+	writeln("macierz x:");
 	writeln(opl_MPSiS_master.x);
-	writeln("koszt C:");	
+	/*
+	writeln("u wildcard_przed:");
+	writeln(opl_MPSiS_master.u_wildcard);
+	writeln("nowe ³¹cza:");
+	writeln(opl_MPSiS_master.u_wildcard * opl_MPSiS_master.y);
+	for (i=1; i < 16; i++)	{
+	writeln(Opl.standardDeviation(opl_MPSiS_master.u_wildcard));	
+	writeln(opl_MPSiS_master.x[i]);
+		opl_MPSiS_master.u_wildcard[i] = opl_MPSiS_master.u_wildcard[i]*1;//opl_MPSiS_master.x[i];
+	}
+	writeln("u wildcard_po:");
+	writeln(opl_MPSiS_master.u_wildcard);
+	*/
+	writeln("koszt C:");
 	writeln(opl_MPSiS_master.c);
 	writeln("koszt K:");
 	writeln(opl_MPSiS_master.k);
@@ -199,23 +206,15 @@
 	writeln(opl_MPSiS_master.nodeLocation);
 	writeln(opl_MPSiS_master.Demands);
 	writeln(opl_MPSiS_master.Capacity);
-	writeln(opl_MPSiS_master.M);
-	for (var i in opl_MPSiS_master.Arcs)
-	   {
-		 	//writeln(opl_MPSiS_master.y[i]);	
-		} 	
-	for (var i in opl_MPSiS_master.Arcs){
-		for (var j in opl_MPSiS_master.Demands){
-			for (var k in opl_MPSiS_master.Paths){	
-			//writeln(i);	
-	   		//writeln(opl_MPSiS_master.x[j][k]);
-		 	//writeln(opl_MPSiS_master.y[i]);	
-		}}}
+	writeln(opl_MPSiS_master.M);	
 	
-	
+	MPSiS_master.end();
+	opl_MPSiS_master.end();
+	data_master_MPSiS.end(); 
+	def_MPSiS_master.end(); 
+	MPSiS_cplex_master.end(); 
 
 	opl_master.end();
-	data_master.end(); 
 	data_master_new.end();
 	def_master.end(); 
 	cplex_master.end(); 
